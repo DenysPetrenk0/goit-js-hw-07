@@ -1,15 +1,17 @@
-const btn = document.querySelector('button');
-let scoreA = 0;
+const btnDecrement = document.querySelector('[data-action = decrement]');
+const btnIncrement = document.querySelector('[data-action = increment]');
 
-btn.onclick = function () {
-    
-    if (btn.dataset.decrement) {
-        scoreA -= 1;
-        document.querySelector('value').innerHTML = `${scoreA}`;
-    }
+let counterValue = 0;
 
-    if (btn.dataset.increment) {
-        scoreA += 1;
-        document.querySelector('value').innerHTML = `${scoreA}`;
-    }
-};
+btnDecrement.addEventListener('click', decrement);
+btnIncrement.addEventListener('click', increment);
+
+function decrement() {
+    counterValue -= 1;
+    document.querySelector('#value').innerHTML = counterValue;
+}
+
+function increment() {
+    counterValue += 1;
+    document.querySelector('#value').innerHTML = counterValue;
+}
