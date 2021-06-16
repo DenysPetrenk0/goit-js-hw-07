@@ -1,20 +1,10 @@
-const firstLiElem = document.querySelector('.item');
-const h2TextFirst = firstLiElem.firstElementChild.textContent;
-const quantityLiTegFirst = firstLiElem.childNodes[3].children.length;
+const liElem = document.querySelectorAll('.item');
 
-console.log(`Категория: ${h2TextFirst}
-Количество элементов: ${quantityLiTegFirst}`);
+liElem.forEach(elem => {
+    console.log(`
+    Категория: ${elem.children[0].textContent}
+    Количество элементов: ${elem.children[1].children.length}
+    `);    
+});
 
-const secondLiElem = firstLiElem.nextSibling.nextSibling;
-const h2TextSecond = secondLiElem.firstElementChild.textContent;
-const quantityLiTegSecond = secondLiElem.childNodes[3].children.length;
 
-console.log(`Категория: ${h2TextSecond}
-Количество элементов: ${quantityLiTegSecond}`);
-
-const thirdLiElem = secondLiElem.nextSibling.nextSibling;
-const h2TextThird= thirdLiElem.firstElementChild.textContent;
-const quantityLiTegThird = thirdLiElem.childNodes[3].children.length;
-
-console.log(`Категория: ${h2TextThird}
-Количество элементов: ${quantityLiTegThird}`);

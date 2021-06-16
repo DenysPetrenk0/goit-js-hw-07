@@ -6,5 +6,5 @@ const ref = {
 ref.input.addEventListener('input', onInput);
 
 function onInput() {
-  ref.output.textContent = ref.input.value;
+  ref.input.value ? ref.output.textContent = ref.input.value : ref.output.textContent = 'незнакомец';
 }

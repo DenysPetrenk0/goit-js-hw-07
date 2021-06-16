@@ -8,5 +8,6 @@ inputNum.addEventListener('blur', event => {
         inputNum.classList.remove('invalid')
     } else {
         inputNum.classList.add('invalid');
+        inputNum.classList.remove('valid')
     }
 });
